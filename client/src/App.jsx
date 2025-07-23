@@ -24,7 +24,6 @@ function App() {
           <Routes>
             <Route path='/' element={<Login/>}></Route>
             <Route path='/files' element={<Files/>}></Route>
-            <Route path='/upload' element={<Upload/>}></Route>
           </Routes>
         </div>
         

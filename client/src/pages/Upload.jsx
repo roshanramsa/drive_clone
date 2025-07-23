@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useState } from "react";
 
 function Upload(){
@@ -36,7 +37,7 @@ function Upload(){
                     <label htmlFor="img" className="w-30 h-30 bg-no-repeat bg-contain">
                         <img src={(imgurl != null) ? imgurl : "./src/assets/uplad.svg"} className="rounded-xl w-full h-full" alt="Upload Image" />
                     </label>
-                    <input id="fileInput" onChange={(e)=>{changeImage(e); setImg(e.target.files[0])}} type="file" className="ml-25 block text-center text-xs text-transparent" title="Upload Image" name="img" />
+                    <input onChange={(e)=>{changeImage(e); setImg(e.target.files[0])}} type="file" className="ml-25 block text-center text-xs text-transparent" title="Upload Image" name="img" id="img" />
 
                     <button onClick={handleSubmit}>Submit</button>
                 </form>
